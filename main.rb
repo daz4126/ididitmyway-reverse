@@ -2,11 +2,11 @@ require 'rubygems'
 require 'sinatra'
 
 get '/' do
-  @title = "Home"
+  @title = "Enter Your text here"
   erb :home
 end
 
-get '/frank' do
-  @title = "My Way"
-  erb :home
+post '/reverse' do
+  @title = "Here's Your Reversed Text:"
+  params[:phrase].reverse
 end
