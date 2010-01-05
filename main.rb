@@ -11,3 +11,9 @@ post '/' do
   @reversed_text = params[:phrase].reverse
   erb :reverse
 end
+
+get '/:phrase' do
+  @title = "Here's Your Reversed Text:"
+  @reversed_text = params[:phrase].reverse
+  erb :reverse
+end
