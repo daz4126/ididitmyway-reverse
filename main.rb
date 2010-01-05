@@ -6,7 +6,8 @@ get '/' do
   erb :home
 end
 
-post '/reverse' do
+post '/' do
   @title = "Here's Your Reversed Text:"
-  params[:phrase].reverse
+  @reversed_text = params[:phrase].reverse
+  erb :reverse
 end
